@@ -1,5 +1,29 @@
+import { AnimatePresence } from "motion/react";
+import { Navigate, Route, Routes, useLocation } from "react-router";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import Backdrop from "./components/Backdrop";
+
+function PublicRoutes() {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/cadastro" element={<RegisterPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 function App() {
-  return <div>Delivery</div>;
+  return (
+    <>
+      <Backdrop />
+      <PublicRoutes />
+    </>
+  );
 }
 
 export default App;
