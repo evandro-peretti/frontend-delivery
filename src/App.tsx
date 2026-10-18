@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import PedidosPage from "./pages/PedidosPage";
 import { useAppSelector } from "./store/hooks";
 import { selectIsAuthenticated } from "./features/auth/authSlice";
+import PedidoDetalhePage from "./pages/PedidoDetalhePage";
 
 function PublicRoutes() {
   const location = useLocation();
@@ -28,6 +29,7 @@ function PrivateRoutes() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/pedidos" element={<PedidosPage />} />
+          <Route path="/pedidos/:id" element={<PedidoDetalhePage />} />
           <Route path="*" element={<Navigate to="/pedidos" replace />} />
         </Routes>
       </AnimatePresence>
