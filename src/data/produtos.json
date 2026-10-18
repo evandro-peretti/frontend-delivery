@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nome": "Pizza Margherita",
+    "descricao": "Molho de tomate, mussarela e manjericão",
+    "valor": 49.9
+  },
+  {
+    "id": 2,
+    "nome": "Hambúrguer Artesanal",
+    "descricao": "180g de carne, queijo cheddar e bacon",
+    "valor": 32.5
+  },
+  {
+    "id": 3,
+    "nome": "Refrigerante Lata",
+    "descricao": "350ml",
+    "valor": 6.0
+  }
+]
