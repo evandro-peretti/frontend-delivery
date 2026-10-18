@@ -2,12 +2,16 @@ import { configureStore } from "@reduxjs/toolkit";
 import { configureApi } from "../api/client";
 import authReducer, { logout } from "../features/auth/authSlice";
 import pedidosReducer from "../features/pedidos/pedidosSlice";
+import produtosReducer from "../features/produtos/produtosSlice";
+import cartReducer from "../features/cart/cartSlice";
 import { saveSession } from "../utils/session";
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
     pedidos: pedidosReducer,
+    produtos: produtosReducer,
+    cart: cartReducer,
   },
 });
 
